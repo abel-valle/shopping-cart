@@ -58,6 +58,20 @@
 
         }
 
+        function removeItem() {
+            $.ajax({
+                type: 'post',
+                url: 'store-items.php',
+                data: {
+                    remove: "remove" 
+                },
+                success: function (response) {
+                    $("#mycart").html(response);
+                    $('#mycart').slideToggle();
+                }
+            });
+        }
+
     </script>
 
 </head>
@@ -70,6 +84,8 @@
 
     <div id="mycart">
     </div>
+
+    <input type="button" onclick="removeItem()" value="Elimina un producto">
 
     <h1>Carrito de compra simple con jquery, ajax y PHP</h1>
 

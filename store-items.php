@@ -14,6 +14,14 @@ if (isset($_POST['item_src'])) {
     exit();
 }
 
+if (isset($_POST['remove'])) {
+    $i = count($_SESSION['name']);
+    $i = $i - 1;
+    session_unset($_SESSION['name'][$i]);
+    session_unset($_SESSION['price'][$i]);
+    session_unset($_SESSION['src'][$i]);
+}
+
 if (isset($_POST['showcart'])) {
     for ($i = 0; $i < count($_SESSION['src']); $i++) {
         echo "<div class='cart-items'>";
@@ -25,4 +33,3 @@ if (isset($_POST['showcart'])) {
     exit();
 }
 
-echo "<p>papas!</p>";
