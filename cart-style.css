@@ -37,7 +37,7 @@ body {
 }
 
 #mycart .cart-items {
-    border-bottom: 1px dashed silver;
+    border-bottom: 1px solid silver;
     padding: 20px;
     padding-left: 10px;
 }
@@ -52,6 +52,10 @@ body {
     margin: 0px;
     font-size: 17px;
     color: rgb(0, 100, 255);
+}
+
+#mycart .cart-items button {
+    float: right;
 }
 
 h1 {
@@ -104,4 +108,10 @@ h1 {
 
 .items p {
     color: rgb(0, 100, 255);
+}
+
+.session-button {
+    margin-top: 20px;
+    margin-right: 80px;
+    float: right;
 }
